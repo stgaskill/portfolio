@@ -1,0 +1,180 @@
+/*coolors link
+https://coolors.co/d0ccd0-fbfcff-aeaaab-605856-3e6371-1c6e8c-274156
+
+#D0CCD0 - Light Gray
+#FBFCFF - Ghost White
+#AEAAAB - Ghost White
+#605856 - Davys Grey
+#3E6371 - Deep Space Sparkle
+#1C6E8C - Blue Sapphire
+#274156 - Charcoal*/
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    background-color: #274156;
+}
+
+h1{
+    color: #D0CCD0;
+}
+
+#header{
+    background: #1C6E8C;
+    margin: 0 auto;
+    padding: 5%;
+}
+#title{
+    text-align: center;
+    font-size: 450%;
+    background-color: #FBFCFF;
+    padding: 10%;
+    border-radius: 5%;
+    color: #605856;
+}
+
+#nav{
+    background-color: #3E6371;
+}
+
+#navlist{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    border-top: 5px solid #AEAAAB;
+    border-bottom: 5px solid #AEAAAB;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+
+#navlist li{
+    list-style: none;
+    padding: 10px 5px 5px 5px;
+    font-size: 150%;
+}
+
+#navlist li a{
+    color: #FBFCFF;
+    text-decoration: none;
+
+}
+
+#main{
+    background: #274156;
+    color: #FBFCFF;
+    padding: 2.5%;
+}
+/*FIRST GRID CONTAINER*/
+.gridcontaintop{
+    margin-top: 1%;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-areas: 
+    'pic1 pic1 pic1 main main main pic2 pic2 pic2'
+    'pic1 pic1 pic1 main main main pic2 pic2 pic2'
+    'content1 content1 content1 main main main content2 content2 content2'
+    'gap gap gap gap gap gap gap gap gap';
+}
+
+#content1,#content2,#pic1,#pic2{
+    color: #FBFCFF;
+}
+
+#pic1{
+    grid-area: pic1;
+}
+
+#content1{
+    grid-area: content1;
+}
+
+#main{
+    grid-area: main;
+}
+
+#pic2{
+    grid-area: pic2;
+}
+
+#content2{
+    grid-area: content2;
+}
+
+#gap{
+    grid-area: gap;
+}
+
+/*SECOND GRID CONTAINTER*/
+.gridcontain2{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+    'pic3 pic3 pic3 content3 content3'
+    'pic3 pic3 pic3 content3 content3';
+}
+
+#pic3{
+    grid-area: pic3;
+}
+
+#content3{
+    grid-area: content3;
+    color: #FBFCFF;
+}
+
+#main2{
+    grid-area: main2;
+    background: #274156;
+    color: #FBFCFF;
+    padding: 2.5%;
+}
+
+/*THIRD GRID CONTAINTER*/
+.gridcontain3{
+    margin-top: 5%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+    'content4 content4 pic4 pic4 pic4'
+    'content4 content4 pic4 pic4 pic4';
+}
+
+#pic4{
+    grid-area: pic4;
+}
+
+#content4{
+    grid-area: content4;
+    color: #FBFCFF;
+}
+
+@media (max-width:750px){
+    .gridcontaintop{
+        grid-template-areas:
+        'main main main' 
+        'pic1 pic1 pic1'
+        'content1 content1 content1'
+        'pic2 pic2 pic2'
+        'content2 content2 content2'
+        'gap gap gap';
+    }
+
+    .gridcontain2{
+        grid-template-areas: 
+        'pic3 pic3 pic3'
+        'content3 content3 content3';
+    }
+
+    .gridcontain3{
+        grid-template-areas: 
+        'pic4 pic4 pic4'
+        'content4 content4 content4';
+    }
+}
